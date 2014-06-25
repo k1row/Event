@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  belongs_to :owner, class_name: 'User' # 関連名は「イベントを作成したユーザ」の関連である事をわかりやすくすためownerに
+
 	validates :name, length: { maximum: 50}, presence: true
   validates :place, length: { maximum: 100}, presence: true
   validates :content, length: { maximum: 2000}, presence: true

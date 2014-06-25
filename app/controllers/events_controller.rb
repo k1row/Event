@@ -1,10 +1,15 @@
+# -*- coding: utf-8 -*-
 class EventsController < ApplicationController
-	before_action :authenticate
+	before_action :authenticate, except: :show
 
-	def new
-		p current_user
-		@event = current_user.created_events.build
+	def show
+    @event = Event.find(params[:id])
 	end
+
+  def new
+  	p current_user
+    @event = current_user.created_events.build
+  end
 
 	def create
 		@event = current_user.created_events.build(event_params)
