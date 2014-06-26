@@ -39,9 +39,17 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
+# gem for OAuth
 gem 'omniauth', '~> 1.2.1'
 gem 'omniauth-twitter', '~> 1.0.1'
+
+# gem for Pager
 gem 'kaminari', '~> 0.15.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+
+# gem for Search library
 gem 'ransack', '~> 1.2.2'
+
+# gem for Image UPload
 gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 3.7.0'
