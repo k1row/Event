@@ -53,3 +53,20 @@ gem 'ransack', '~> 1.2.2'
 # gem for Image UPload
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.7.0'
+
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-core', '~> 3.0.0'
+  gem 'rspec-expectations', '~> 3.0.0'
+  gem 'rspec-mocks', '~> 3.0.0'
+  gem 'rspec-support', '~> 3.0.0'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+	gem 'shoulda-matchers', '~> 2.6.0'
+	gem 'capybara', '~> 2.2.1'
+	gem 'poltergeist', '~> 1.5.0'
+  gem 'database_cleaner', '~> 1.2.0'
+end
