@@ -54,6 +54,17 @@ gem 'ransack', '~> 1.2.2'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.7.0'
 
+gem 'rspec'
+gem 'serverspec'
+
+group :development do
+  gem 'capistrano', "3.2.1"
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn'
+  #gem 'capistrano-rbenv', "~> 2.0"
+  gem 'rvm1-capistrano3', require: false
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
@@ -62,6 +73,9 @@ group :development, :test do
   gem 'rspec-mocks', '~> 3.0.0'
   gem 'rspec-support', '~> 3.0.0'
   gem 'factory_girl_rails'
+  gem 'chef'
+  gem 'knife-solo'
+  gem 'berkshelf'
 end
 
 group :test do
@@ -69,4 +83,10 @@ group :test do
 	gem 'capybara', '~> 2.2.1'
 	gem 'poltergeist', '~> 1.5.0'
   gem 'database_cleaner', '~> 1.2.0'
+  gem 'simplecov'
+  gem 'rails_best_practices'
+end
+
+group :staging, :production do
+  gem 'unicorn'
 end

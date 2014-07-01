@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
@@ -26,11 +29,11 @@ RSpec.configure do |config|
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
   # --seed 1234
-  config.order = "random"
-  config.include Rails.application.routes.url_helpers
-  config.include FactoryGirl::Syntax::Methods
-  config.include(LoginHelper::Feature, type: :feature)
-  config.include(LoginHelper::Controller, type: :controller)
+  #config.order = "random"
+  #config.include Rails.application.routes.url_helpers
+  #config.include FactoryGirl::Syntax::Methods
+  #config.include(LoginHelper::Feature, type: :feature)
+  #config.include(LoginHelper::Controller, type: :controller)
 
 
   config.before(:all, type: :feature) do
@@ -40,7 +43,7 @@ RSpec.configure do |config|
       uid: '12345',
       info: {
         nickname: 'k16',
-        image_url: 'http://example.com/k16.jpg'
+        image: 'http://example.com/k16.jpg'
       }
       })
   end

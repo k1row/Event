@@ -16,7 +16,7 @@ RSpec.describe Event, :type => :model do
 		end
 
 		context '#owner_idと引数の#idが同じ時' do
-			let(:user) { double('user', id: event.id) }
+			let(:user) { double('user', id: event.owner_id) }
 			it { should be_truthy}
 		end
 	end
